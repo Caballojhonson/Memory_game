@@ -1,11 +1,16 @@
-import React from "react";
-
+import React, { useState,  } from 'react';
+import GetCats from './Components/GetCats';
 
 function App() {
-  return (
-    <div >
-    </div>
-  );
+	const [data, setData] = useState('');
+
+	const getCats = (catData) => setData(catData);
+
+	return (
+		<div>
+			<GetCats callback={getCats} />
+		</div>
+	);
 }
 
 export default App;

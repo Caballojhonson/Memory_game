@@ -8,7 +8,7 @@ export default function GetCats(props) {
 	async function apiCall() {
 		try {
 			fetch(
-				'https://api.thecatapi.com/v1/images/search?limit=100&size=small',
+				'https://api.thecatapi.com/v1/images/search?limit=100',
 				{}
 			)
 				.then((response) => response.json())

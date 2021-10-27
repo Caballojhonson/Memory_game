@@ -6,5 +6,5 @@ export default function Card(props) {
 
 	const toggleBool = () => setIsClicked((prev) => !prev);
 
-	return <img className="card" onClick={toggleBool} src={props.src} />;
+	return <img className="card" onClick={props.onClick} src={props.src} />;
 }

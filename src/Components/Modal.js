@@ -4,7 +4,7 @@ export default function Modal() {
     const [modalDisplay, setModalDisplay] = useState({})
 
     const hideModal = () => {
-        setModalDisplay({display: "hidden"})
+        setModalDisplay({display: "none"})
         console.log('Logging')
     }
 

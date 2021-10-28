@@ -21,7 +21,7 @@ function App() {
 		let currentIndex = array.length,
 			randomIndex;
 
-		while (currentIndex != 0) {
+		while (currentIndex !== 0) {
 			randomIndex = Math.floor(Math.random() * currentIndex);
 			currentIndex--;
 			[array[currentIndex], array[randomIndex]] = [
@@ -31,6 +31,13 @@ function App() {
 		}
 
 		return array;
+	};
+
+  const reset = () => {
+    setCatNum(5)
+    setAreClicked([]);
+    setCurrentData(shuffle(rawData.slice(0, 5)));
+    setScores(prev => prev.concat(areClicked.length))
 	};
 
 	const checkIfClicked = (key) => {
@@ -43,12 +50,7 @@ function App() {
     setHighScore(scores.reduce((a,b) => Math.max(a,b)))
   }, [scores])
 
-	const reset = () => {
-    setCatNum(5)
-    setAreClicked([]);
-    setCurrentData(shuffle(rawData.slice(0, 5)));
-    setScores(prev => prev.concat(areClicked.length))
-	};
+	
 
 	const getCats = (apiResponse) => {
 		setRawData(apiResponse);

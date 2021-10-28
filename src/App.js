@@ -3,6 +3,7 @@ import Card from './Components/Card';
 import GetCats from './Components/GetCats';
 import Loadscreen from './Components/Loadscreen';
 import Modal from './Components/Modal';
+import Retry from './Components/Retry';
 import Scoreboard from './Components/Scoreboard';
 
 
@@ -13,7 +14,7 @@ function App() {
 	const [catNum, setCatNum] = useState(5);
 	const [areClicked, setAreClicked] = useState([]);
 	const [scores, setScores] = useState([0]);
-  const [highScore, setHighScore] = useState(0)
+  const [highScore, setHighScore] = useState(0);
   
 
 	const shuffle = (array) => {
@@ -81,6 +82,7 @@ function App() {
 
 	return (
 		<div className="main__container">
+      <Retry scores={scores}/>
       <Modal />
 			<Scoreboard score={areClicked.length} highScore={highScore} />
 			<GetCats callback={getCats} />

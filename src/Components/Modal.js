@@ -5,7 +5,6 @@ export default function Modal() {
 
     const hideModal = () => {
         setModalDisplay({display: "none"})
-        console.log('Logging')
     }
 
     return (
@@ -13,6 +12,7 @@ export default function Modal() {
             <div className="modal">
                 <h1>Welcome!</h1>
                 <p>Never click on the same kitten!</p>
+                <p>If you don't like your kittens just refresh the page. </p>
                 <h5>Good Luck...</h5>
             </div>
         </div>

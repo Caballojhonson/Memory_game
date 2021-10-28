@@ -6,6 +6,8 @@ import Modal from './Components/Modal';
 import Retry from './Components/Retry';
 import Scoreboard from './Components/Scoreboard';
 
+import './App.css';
+
 
 function App() {
 	const [rawData, setRawData] = useState([]);
